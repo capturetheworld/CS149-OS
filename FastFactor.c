@@ -10,6 +10,7 @@ printf("argc %d\n", argc);
 		{
 		printf("the int %d\n", i);
 			if(argv[i] <= 0){
+				printf("the int %d\n", argv[i]);
 				printf("%s\n", "Error, only enter numbers and positive numbers greater than 0.");
 				
 
