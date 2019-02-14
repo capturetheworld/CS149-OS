@@ -7,7 +7,7 @@ int main(int argc, char *argv[]){
 
 	 for (int i=0; i < argc; i++)
 		{
-			if(argv[i] ==NaN || argv[i] <= 0){
+			if(!(isnumber(argv[i]) || argv[i] <= 0){
 				printf("Error, only enter numbers and positive numbers greater than 0. %s\n");
 				exit();
 
