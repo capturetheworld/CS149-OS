@@ -7,7 +7,7 @@ int main(int argc, char *argv[]){
 printf("argc %d\n", argc);
 
 
-	 for (int i=0; i < argc-1; i++)
+	 for (int i=1; i <= argc; i++)
 		{
 		char *invalid;
 		long long input = strtol(argv[i], &invalid, 10);
