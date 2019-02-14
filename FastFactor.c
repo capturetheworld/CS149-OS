@@ -1,15 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>     /* strtoll */
 
 int main(int argc, char *argv[]){
 
-	long long input;
+	
 printf("argc %d\n", argc);
 
 
 	 for (int i=0; i < argc-1; i++)
 		{
+		long long input = strtol(argv[i]);
 		printf("the int %d\n", i);
-			if(argv[i] <= 0){
+			if(input <= 0){
 				printf("the int %s\n", argv[i]);
 				printf("%s\n", "Error, only enter numbers and positive numbers greater than 0.");
 				
