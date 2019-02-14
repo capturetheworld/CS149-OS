@@ -9,7 +9,9 @@ printf("argc %d\n", argc);
 
 	 for (int i=0; i < argc-1; i++)
 		{
-		long long input = strtol(argv[i]);
+		char *invalid;
+		long long input = strtol(argv[i], &invalid, 10);
+
 		printf("the int %d\n", i);
 			if(input <= 0){
 				printf("the int %s\n", argv[i]);
