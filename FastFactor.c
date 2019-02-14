@@ -3,13 +3,15 @@
 int main(int argc, char *argv[]){
 
 	long long input;
+printf("argc %d\n", argc);
 
 
-	 for (int i=0; i < argc; i++)
+	 for (int i=0; i < argc-1; i++)
 		{
-			if(!(isnumber(argv[i]) || argv[i] <= 0){
-				printf("Error, only enter numbers and positive numbers greater than 0. %s\n");
-				exit();
+		printf("the int %d\n", i);
+			if(argv[i] <= 0){
+				printf("%s\n", "Error, only enter numbers and positive numbers greater than 0.");
+				
 
 			}
 
