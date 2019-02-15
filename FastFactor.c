@@ -59,15 +59,17 @@
         //parent
 
         close(fd[1]); // close write of parent
-        while ((n = read(fd[0],buffer, sizeof(buffer)) > 0)) { // keep reading buffer
-            write(STDOUT_FILENO, buffer, n);
-            finalfactors[iterator] = buffer;
-            iterator++;
-          }
-          if (n < 0) { // -1 = error
-            perror("error reading from pipe");
-          }
+        
+            write(STDOUT_FILENO, *buffer, n);
 
+            for (int i=0; i<n, i++){
+            finalfactors[iterator] = *buffer[n];
+            
+            iterator++;
+
+         }
+         
+          
           for (long long i = ((input / 2) + 1); i <= input; i++) {
             if (input % i == 0) {
               //is a factor
@@ -86,15 +88,20 @@
           printf("%s\n", "Child process created");
 
           close(fd[0]); // read channel close
+           long long firstfactors[100];
+           int indexff = 0;
 
           for (long long i = 1; i <= input / 2; i++) {
             if (input % i == 0) {
               //is a factor
-              write(fd[1], i, sizeof(i)); // write things
+            	firstfactors[indexff] = i;
+            	indexff++;
+              
 
             }
 
           }
+          write(fd[1], &firstfactors, sizeof(firstfactors)); // write things
 
           close(fd[1]); // Parent knows done writing
 
