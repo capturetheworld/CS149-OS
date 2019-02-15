@@ -35,22 +35,7 @@ while(getline != ""){
 
       }
 
-      //typedef int bool =true;
-
-      //int length = strlen(input);
-
-      //  for (int i = 0; i < length; i++)
-      //  {
-      //    if (!isdigit(input)
-      //      bool = false;
-      //  }
-
-      //if (isdigit(input) == false){
-      //	printf("%llu\n", input);
-
-      //	printf("%s\n", "Error, only enter numerical numbers, no symbols or other characters.");
-      //	exit(0);
-      //}
+     
 
       long long finalfactors[100];
       int iterator = 0;
@@ -68,7 +53,7 @@ while(getline != ""){
 
         close(fd[1]); // close write of parent
         
-            read(fd[0], *firstfactors, sizeof(firstfactors));
+            read(fd[0], firstfactors, sizeof(firstfactors));
 
             for (int i=0; i<n; i++){
             	finalfactors[iterator] = *firstfactors[n];
