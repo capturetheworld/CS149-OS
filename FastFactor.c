@@ -8,14 +8,11 @@
 
   int main(int argc, char * argv[]) {
 
-size_t n =0;
-
-while(getline != ""){
-	argv[argc] = getline(&ptr, &n, stdin);
-
+  	char *pointer;
+  	size_t t =0;
+  	getline(&pointer, &t, stdin)!=-1;
 
 
-}
     //printf("argc %d\n", argc);
 
     for (int i = 1; i <= argc; i++) //loop through each element
