@@ -19,9 +19,10 @@
     //printf("argc %d\n", argc);
 
     for (int i = 1; i <= argc; i++) //loop through each element
-    	printf("argc %s\n", "i am here 9");
+    	
 
     {
+    	printf("argc %s\n", "i am here 9");
       int fd[2], n, status;
       char firstfactors[MAX];
       pipe(fd);
