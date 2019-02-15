@@ -68,16 +68,17 @@ while(getline != ""){
 
         close(fd[1]); // close write of parent
         
-            write(STDOUT_FILENO, *buffer, n);
+            read(fd[0], *firstfactors, sizeof(firstfactors));
 
             for (int i=0; i<n; i++){
-            finalfactors[iterator] = *buffer[n];
+            	finalfactors[iterator] = *buffer[n];
             
             iterator++;
 
          }
          
           
+          //add the second half of the factors here:
           for (long long i = ((input / 2) + 1); i <= input; i++) {
             if (input % i == 0) {
               //is a factor
@@ -92,11 +93,13 @@ while(getline != ""){
           }
         }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////
         else {
          // printf("%s\n", "Child process created");
 
           close(fd[0]); // read channel close
-           long long firstfactors[100];
+           long long int firstfactors[100];
            int indexff = 0;
 
           for (long long i = 1; i <= input / 2; i++) {
