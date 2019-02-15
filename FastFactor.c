@@ -57,8 +57,8 @@ printf("argc %d\n", argc);
 
 				printf("%llu", input);
 				printf("%s\n", ":");
-				for(int j = 0; j <=iterator; loop++){//print out array
-     				 printf("%d ", finalfactors[iterator]);
+				for(int j = 0; j <=iterator; j++){//print out array
+     				 printf("%llu ", finalfactors[iterator]);
      				}
 			}
 
