@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>     /* strtoll */
 #include <ctype.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[]){
 
@@ -25,7 +26,57 @@ printf("argc %d\n", argc);
 				exit(0);
 			}
 
-			long long finalfactors[20];
+
+
+
+			long long finalfactors[100];
+			int iterator = 0;
+
+
+			p = fork();
+
+			if (p<0){
+				printf("%s\n", "Couldn't split processes");
+				exit(-1);
+
+
+			}
+
+			else if(p>0){
+				//parent
+
+				for(long long i=1; i<=input/2; i++{
+					if(input%i ==0){
+						//is a factor
+						finalfactors[iterator] = i;
+					}
+				}
+
+
+
+
+
+
+				printf("%llu", input);
+				printf("%s\n", ":");
+				for(int j = 0; j <=iterator; loop++){//print out array
+     				 printf("%d ", finalfactors[iterator]);
+     				}
+} 
+
+
+
+
+
+
+
+
+			}
+
+			else{
+				printf("%s\n", "Child process created");
+
+			}
 
 
 
