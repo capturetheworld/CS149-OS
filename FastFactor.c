@@ -11,7 +11,8 @@
   	char *pointer;
   	size_t t =0;
   	while(getline(&pointer, &t, stdin)!=-1){
-  		
+
+
   	}
 
     //printf("argc %d\n", argc);
@@ -74,6 +75,8 @@
           for (int j = 0; j <= iterator; j++) { //print out array
             printf("%llu ", finalfactors[iterator]);
           }
+
+          exit(0);
         }
 
 
