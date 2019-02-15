@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>     /* strtoll */
+#include <ctype.h>
 
 int main(int argc, char *argv[]){
 
@@ -19,7 +20,7 @@ printf("argc %d\n", argc);
 				exit(0);
 		
 			}
-			if (!(isDigit(input))){
+			if (isDigit(input) == 0{
 				printf("%s\n", "Error, only enter numerical numbers, no symbols or other characters.");
 				exit(0);
 			}
