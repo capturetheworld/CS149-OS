@@ -56,6 +56,7 @@
 
             for (int i=0; i<n; i++){
             	finalfactors[iterator] = firstfactors[n];
+            	printf("argc %s\n", "i am here 3");
             
             iterator++;
 
@@ -67,6 +68,7 @@
             if (input % i == 0) {
               //is a factor
               finalfactors[iterator] = i;
+              printf("argc %s\n", "i am here 1");
             }
 
           }
@@ -74,6 +76,7 @@
           printf("%llu", input); printf("%s\n", ":");
           for (int j = 0; j <= iterator; j++) { //print out array
             printf("%llu ", finalfactors[iterator]);
+            printf("argc %s\n", "i am here 2");
           }
 
           exit(0);
@@ -93,6 +96,7 @@
               //is a factor
             	firstfactors[indexff] = i;
             	indexff++;
+            	printf("argc %s\n", "i am here 4");
               
 
             }
