@@ -23,22 +23,22 @@ int main(int argc, char *argv[]){
 			}
 
 
-			typedef int bool =true;
+			//typedef int bool =true;
 
-			int length = strlen(input);
+			//int length = strlen(input);
 
-			  for (int i = 0; i < length; i++)
-			  {
-			    if (!isdigit(input)
-			      bool = false;
-			  }
+			//  for (int i = 0; i < length; i++)
+			//  {
+			//    if (!isdigit(input)
+			//      bool = false;
+			//  }
 
-			if (isdigit(input) == false){
-				printf("%llu\n", input);
+			//if (isdigit(input) == false){
+			//	printf("%llu\n", input);
 
-				printf("%s\n", "Error, only enter numerical numbers, no symbols or other characters.");
-				exit(0);
-			}
+			//	printf("%s\n", "Error, only enter numerical numbers, no symbols or other characters.");
+			//	exit(0);
+			//}
 
 
 
