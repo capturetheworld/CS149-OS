@@ -10,8 +10,9 @@
 
   	char *pointer;
   	size_t t =0;
-  	getline(&pointer, &t, stdin)!=-1;
-
+  	while(getline(&pointer, &t, stdin)!=-1){
+  		
+  	}
 
     //printf("argc %d\n", argc);
 
