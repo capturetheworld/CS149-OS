@@ -24,7 +24,7 @@ printf("argc %d\n", argc);
 				exit(0);
 			}
 
-			int finalfactors[];
+			long long finalfactors[20];
 
 
 
