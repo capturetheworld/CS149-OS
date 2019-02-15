@@ -1,4 +1,7 @@
-#include < stdio.h > #include < stdlib.h > /* strtoll */ #include < ctype.h > #include < unistd.h >
+#include < stdio.h > 
+#include < stdlib.h > /* strtoll */ 
+#include < ctype.h > 
+#include < unistd.h >
 
   int main(int argc, char * argv[]) {
 
