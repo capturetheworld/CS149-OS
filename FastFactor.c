@@ -22,7 +22,7 @@ while(getline != ""){
 
     {
       int fd[2], n, status;
-      char buffer[MAX];
+      char firstfactors[MAX];
       pipe(fd);
       char * invalid;
       long long input = strtol(argv[i], & invalid, 10);
