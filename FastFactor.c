@@ -66,6 +66,7 @@
           
           //add the second half of the factors here:
           for (long long i = ((input / 2) + 1); i <= input; i++) {
+          	printf("argc %s\n", "i am here 6");
             if (input % i == 0) {
               //is a factor
               finalfactors[iterator] = i;
@@ -93,6 +94,7 @@
            int indexff = 0;
 
           for (long long i = 1; i <= input / 2; i++) {
+          	printf("argc %s\n", "i am here 8");
             if (input % i == 0) {
               //is a factor
             	firstfactors[indexff] = i;
