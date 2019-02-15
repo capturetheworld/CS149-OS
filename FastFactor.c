@@ -22,7 +22,7 @@ int main(int argc, char *argv[]){
 		
 			}
 			if (isdigit(input) == 0){
-				printf("%d\n", input);
+				printf("%llu\n", input);
 
 				printf("%s\n", "Error, only enter numerical numbers, no symbols or other characters.");
 				exit(0);
