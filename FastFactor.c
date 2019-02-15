@@ -7,7 +7,7 @@ int main(int argc, char *argv[]){
 printf("argc %d\n", argc);
 
 
-	 for (int i=1; i <= argc; i++)
+	 for (int i=1; i <= argc; i++) //loop through each element
 		{
 		char *invalid;
 		long long input = strtol(argv[i], &invalid, 10);
@@ -20,8 +20,27 @@ printf("argc %d\n", argc);
 
 			}
 
+			int finalfactors[];
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		}
 
 
 }
+
+
