@@ -16,13 +16,17 @@ printf("argc %d\n", argc);
 			if(input <= 0){
 				printf("the int %s\n", argv[i]);
 				printf("%s\n", "Error, only enter numbers and positive numbers greater than 0.");
-				
-
+				exit();
+		
+			}
+			if !(isDigit(input)){
+				printf("%s\n", "Error, only enter numerical numbers, no symbols or other characters.");
+				exit();
 			}
 
 			int finalfactors[];
 
-			
+
 
 
 
