@@ -113,7 +113,7 @@ while(getline != ""){
           
 
    			
-          write(fd[1], &firstfactors, sizeof(firstfactors)); // write things
+          write(fd[1], firstfactors, sizeof(firstfactors)); // write things
 
           close(fd[1]); // Parent knows done writing
 
