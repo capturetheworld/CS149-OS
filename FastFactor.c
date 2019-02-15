@@ -21,7 +21,19 @@ int main(int argc, char *argv[]){
 				exit(0);
 		
 			}
-			if (isdigit(input) == 0){
+
+
+			typedef int bool =true;
+
+			int length = strlen(input);
+
+			  for (int i = 0; i < length; i++)
+			  {
+			    if (!isdigit(input)
+			      bool = false;
+			  }
+
+			if (isdigit(input) == false){
 				printf("%llu\n", input);
 
 				printf("%s\n", "Error, only enter numerical numbers, no symbols or other characters.");
