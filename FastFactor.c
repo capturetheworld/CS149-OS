@@ -19,6 +19,7 @@
     //printf("argc %d\n", argc);
 
     for (int i = 1; i <= argc; i++) //loop through each element
+    	printf("argc %s\n", "i am here 9");
 
     {
       int fd[2], n, status;
@@ -29,6 +30,7 @@
 
       //printf("the int %d\n", i);
       if (input <= 0) {
+      	printf("argc %s\n", "i am here 10");
         printf("the int %s\n", argv[i]);
         printf("%s\n", "Error, only enter numbers and positive numbers greater than 0.");
         exit(0);
@@ -43,12 +45,14 @@
       int pid = fork();
 
       if (pid < 0) {
+      	printf("argc %s\n", "i am here 11");
         printf("%s\n", "Couldn't split processes");
         exit(-1);
 
       }
       //S/O modified to fit with long long
       else if (pid > 0) {
+      	printf("argc %s\n", "i am here 12");
         //parent
 
         close(fd[1]); // close write of parent
