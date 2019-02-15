@@ -17,6 +17,7 @@
   	}
 
     //printf("argc %d\n", argc);
+  	printf("argc %s\n", "i am here 100");
 
     for (int i = 1; i <= argc; i++) //loop through each element
     	
