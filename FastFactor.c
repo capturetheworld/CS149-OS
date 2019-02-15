@@ -11,6 +11,7 @@
   	char *pointer;
   	size_t t =0;
   	while(getline(&pointer, &t, stdin)!=-1){
+  		printf("argc %s\n", "i am here 0");
 
 
   	}
