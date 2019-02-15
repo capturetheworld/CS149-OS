@@ -33,19 +33,19 @@ printf("argc %d\n", argc);
 			int iterator = 0;
 
 
-			p = fork();
+			int pid = fork();
 
-			if (p<0){
+			if (pid<0){
 				printf("%s\n", "Couldn't split processes");
 				exit(-1);
 
 
 			}
 
-			else if(p>0){
+			else if(pid>0){
 				//parent
 
-				for(long long i=1; i<=input/2; i++{
+				for(long long i=1; i<=input/2; i++){
 					if(input%i ==0){
 						//is a factor
 						finalfactors[iterator] = i;
@@ -55,22 +55,11 @@ printf("argc %d\n", argc);
 
 
 
-
-
 				printf("%llu", input);
 				printf("%s\n", ":");
 				for(int j = 0; j <=iterator; loop++){//print out array
      				 printf("%d ", finalfactors[iterator]);
      				}
-} 
-
-
-
-
-
-
-
-
 			}
 
 			else{
