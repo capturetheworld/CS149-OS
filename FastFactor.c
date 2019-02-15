@@ -62,7 +62,7 @@
         
             write(STDOUT_FILENO, *buffer, n);
 
-            for (int i=0; i<n, i++){
+            for (int i=0; i<n; i++){
             finalfactors[iterator] = *buffer[n];
             
             iterator++;
@@ -101,7 +101,12 @@
             }
 
           }
-          write(fd[1], &firstfactors, sizeof(firstfactors)); // write things
+
+          int  *ip;        /* pointer variable declaration */
+          ip = &firstfactors;
+
+   			
+          write(fd[1], ip, sizeof(firstfactors)); // write things
 
           close(fd[1]); // Parent knows done writing
 
