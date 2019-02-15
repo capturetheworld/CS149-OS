@@ -2,6 +2,8 @@
 #include <stdlib.h> /* strtoll */ 
 #include <ctype.h> 
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #define MAX 100
 
   int main(int argc, char * argv[]) {
@@ -59,7 +61,7 @@
         close(fd[1]); // close write of parent
         while ((n = read(fd[0], buffer, sizeof(buffer)) > 0)) { // keep reading buffer
             write(STDOUT_FILENO, buffer, n);
-            finalfactors[iterator] = & buffer;
+            finalfactors[iterator] = &buffer;
             iterator++;
           }
           if (n < 0) { // -1 = error
