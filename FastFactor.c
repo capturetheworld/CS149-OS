@@ -85,7 +85,7 @@
         }
 
         else {
-          printf("%s\n", "Child process created");
+         // printf("%s\n", "Child process created");
 
           close(fd[0]); // read channel close
            long long firstfactors[100];
@@ -102,11 +102,10 @@
 
           }
 
-          int  *ip;        /* pointer variable declaration */
-          ip = &firstfactors;
+          
 
    			
-          write(fd[1], ip, sizeof(firstfactors)); // write things
+          write(fd[1], &firstfactors, sizeof(firstfactors)); // write things
 
           close(fd[1]); // Parent knows done writing
 
