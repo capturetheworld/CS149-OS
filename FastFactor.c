@@ -71,7 +71,7 @@ while(getline != ""){
             read(fd[0], *firstfactors, sizeof(firstfactors));
 
             for (int i=0; i<n; i++){
-            	finalfactors[iterator] = *buffer[n];
+            	finalfactors[iterator] = *firstfactors[n];
             
             iterator++;
 
