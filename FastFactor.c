@@ -59,9 +59,9 @@
         //parent
 
         close(fd[1]); // close write of parent
-        while ((n = read(fd[0],*buffer, sizeof(buffer)) > 0)) { // keep reading buffer
-            write(STDOUT_FILENO, *buffer, n);
-            finalfactors[iterator] = &buffer;
+        while ((n = read(fd[0],buffer, sizeof(buffer)) > 0)) { // keep reading buffer
+            write(STDOUT_FILENO, buffer, n);
+            finalfactors[iterator] = buffer;
             iterator++;
           }
           if (n < 0) { // -1 = error
@@ -90,7 +90,7 @@
           for (long long i = 1; i <= input / 2; i++) {
             if (input % i == 0) {
               //is a factor
-              write(fd[1], *i, sizeof(i)); // write things
+              write(fd[1], i, sizeof(i)); // write things
 
             }
 
