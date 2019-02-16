@@ -121,7 +121,7 @@ int main(int argc, char * argv[]) {
 
           for (long long i = 1; i <= (input / 2); i++) {
           	printf("argc %s\n", "i am here 8");
-            printf("INPUT IS %d", input);
+            printf("INPUT IS %llu", input);
           	if (input % i == 0) {
               //is a factor
           		firstfactors[indexff] = i;
