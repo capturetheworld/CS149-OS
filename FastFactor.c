@@ -9,12 +9,16 @@
   int main(int argc, char * argv[]) {
 
   	char *pointer;
-  	size_t t =100;
+
+  	size_t t =32;
+
+	pointers = (char *)malloc(BUFSZE * sizeof(char));
   	while(getline(&pointer, &t, stdin)!=-1){
   		printf("argc %s\n", "i am here 0");
 
 
   	}
+	printf(" The line is %d", t);
 
     //printf("argc %d\n", argc);
   	printf("argc %s\n", "i am here 100");
