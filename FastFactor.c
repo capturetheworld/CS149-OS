@@ -119,8 +119,9 @@ int main(int argc, char * argv[]) {
           long long int firstfactors[100];
           int indexff = 0;
 
-          for (long long i = 1; i <= input / 2; i++) {
+          for (long long i = 1; i <= (input / 2); i++) {
           	printf("argc %s\n", "i am here 8");
+            printf("INPUT IS %d", input);
           	if (input % i == 0) {
               //is a factor
           		firstfactors[indexff] = i;
