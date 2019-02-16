@@ -8,19 +8,29 @@
 
   int main(int argc, char * argv[]) {
 
-  	char *pointer;
+  	char *pointers;
+	char *pointers_array[MAX];
 
-  	size_t t =32;
+  	size_t buf_sz =32;
+	size_t memory_read;
 
-	pointers = (char *)malloc(BUFSZE * sizeof(char));
-  	while(getline(&pointer, &t, stdin)!=-1){
-  		printf("argc %s\n", "i am here 0");
+	pointers = (char *)malloc(buf_sz * sizeof(char));
+	if (pointers == NULL){
+		printf("Unable to allocate memory");
+		exit(1);
+	}
+
+  	while ((memory_read = getline(&pointers, &buf_sz, stdin)) != -1){
+  //	memory_read = getline(&pointers, &buf_sz, stdin); {
+	printf(" The line is %s\n", pointers);
+		pointers++;
+	}
+  	//	printf("argc %s\n", "i am here 0");
 
 
-  	}
-	printf(" The line is %d", t);
+	//printf(" The line is %s\n", pointers);
 
-    //printf("argc %d\n", argc);
+    //printf("argc %s\n", pointers);
   	printf("argc %s\n", "i am here 100");
 
     for (int i = 1; i <= argc; i++) //loop through each element
@@ -30,6 +40,7 @@
     	printf("argc %s\n", "i am here 9");
       int fd[2], n, status;
       char firstfactors[MAX];
+
       pipe(fd);
       char * invalid;
       long long input = strtol(argv[i], & invalid, 10);
