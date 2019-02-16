@@ -63,7 +63,7 @@ int main(int argc, char * argv[]) {
 
     	long long finalfactors[100];
     	int iterator = 0;
-
+    	fflush(stdin);
     	int pid = fork();
 
     	if (pid < 0) {
