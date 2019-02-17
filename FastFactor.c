@@ -70,6 +70,7 @@ int main(int argc, char * argv[]) {
 
 
 
+
 }
 
 
@@ -109,18 +110,7 @@ int main(int argc, char * argv[]) {
         hasError(3);
 
       }
-
-
-
-    
-
-
-
-
-
-          
-
-
+    }
   }
 
   void convertPointer(int inputIndex){
@@ -131,18 +121,32 @@ int main(int argc, char * argv[]) {
     inputList[inputIndex] =  strtol(inputPointers[inputIndex], & invalid, 10);
 
 
-
-
-
-
-
-
-
-
   }
 
 
   void hasError(int errorNum){
+
+    if(errorNum == 1){
+      printf("\nFound a non-numerical number, use only numerical numbers");
+      exit(-1);
+
+
+    }
+    else if(errorNum == 2){
+
+      printf("\nFound a negative number or 0, use only positive numerical numbers");
+      exit(-1);
+      
+    }
+    else if(errorNum == 3){
+
+      //printf("\nCan't factor 1, it is only itself");
+      printf("\n1: 1")
+
+      
+    }
+
+
 
 
 
