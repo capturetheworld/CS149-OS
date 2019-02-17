@@ -5,38 +5,164 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #define MAX 100
+extern long long int inputList[100]; //global input array of long long integers
+extern int inputTally; //global integer of index of last element in inputList (starts at 0)
+char* inputPointers[MAX];
 
 int main(int argc, char * argv[]) {
 
-	char *pointers;
-	char *pointers_array[MAX];
+  //c for dummies
+  char *pointer;
+  
+  size_t n =32; //buffer size
+  size_t memory_read;
 
-	size_t buf_sz =32;
-	size_t memory_read;
+  if(argc <= 1){ //only inputed program name
+    error();
+  }
 
-	pointers = (char *)malloc(buf_sz * sizeof(char));
-	if (pointers == NULL){
-		printf("Unable to allocate memory");
-		exit(1);
-	}
 
-	
+  if(argc == 3 && argv[1] == '<'){ //only possible case for < file redirect
 
-	while ((memory_read = getline(&pointers, &buf_sz, stdin)) != -1){
-  //	memory_read = getline(&pointers, &buf_sz, stdin); {
-		printf(" The line is %s\n", pointers);
+     inputTally = 0;//reset input tally
 
-		argv[argc] = pointers;
-		argc++;
-		pointers++;
-	}
+
+      pointer = (char *)malloc(buf_sz * sizeof(char));
+      if (pointer == NULL){
+        printf("Unable to allocate memory");
+        exit(1);
+      }
+
+
+
+      while ((memory_read = getline(&pointer, &n, stdin)) != -1){
+        //  memory_read = getline(&pointers, &buf_sz, stdin); {
+        //printf(" The line is %s\n", pointers);
+
+        inputPointers[inputTally] = pointer;
+        inputTally++;
+        pointers++;
+      }
+
+
+    }
+    else{ //command line input
+
+      inputTally = 0; //reset inputTally
+
+      for (int i = 1; i<argc; ++i){ //loop through argv using argc, skipping first element
+
+        inputPointers[inputTally] = argv[argc]; //place argv elements into argc, end at element before argc e.g. (0[X]1[X]2[] argc =2)
+        inputTally++; //increment input tally, should have index of last elements
+      }
+    }
+
+    
+
+  
+
+
+  // done with input run conversion spit out errors
+
+
+  verifyInput();
+  computerFactors();
+
+
+
+}
+
+
+
+
+
+  void verifyInput(){
+
+      
+
+
+    for(int j = 0; j<=inputTally; j++){
+
+      int length = strlen(inputPointers[j]); //grab length of each input
+
+      for (int k = 0; i < length; k++)
+          {
+            if (!isdigit(  inputPointers[j[k]] )) //should grab first char of the char in the array
+              hasError(1);
+          }
+
+
+      convertPointer(j);
+
+
+
+
+      if (inputList[j] <= 0) { //is negative or 0
+        hasError(2);
+
+    
+
+      }
+
+      if (inputList[j] == 1){
+
+        hasError(3);
+
+      }
+
+
+
+    
+
+
+
+
+
+          
+
+
+  }
+
+  void convertPointer(int inputIndex){
+
+    char * invalid;
+
+
+    inputList[inputIndex] =  strtol(inputPointers[inputIndex], & invalid, 10);
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+  void hasError(int errorNum){
+
+
+
+  }
+
+
+  
+
+
+
+
+void computeFactors() {
+
   	//	printf("argc %s\n", "i am here 0");
 
 
 	//printf(" The line is %s\n", pointers);
 
     //printf("argc %s\n", pointers);
-	printf("argc %s\n", "i am here 100");
+  printf("argc %s\n", "i am here 100");
 
     for (int i = 1; i < argc; i++) //loop through each element
     	
@@ -47,17 +173,8 @@ int main(int argc, char * argv[]) {
     	char firstfactors[MAX];
 
     	pipe(fd);
-    	char * invalid;
-    	long long input = strtol(argv[i], & invalid, 10);
-
-      //printf("the int %d\n", i);
-    	if (input <= 0) {
-    		printf("argc %s\n", "i am here 10");
-    		printf("the int %s\n", argv[i]);
-    		printf("%s\n", "Error, only enter numbers and positive numbers greater than 0.");
-    		exit(0);
-
-    	}
+    
+    	
 
 
 
@@ -108,11 +225,11 @@ int main(int argc, char * argv[]) {
           }
 
           exit(0);
-      }
+        }
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-      else {
+        else {
          // printf("%s\n", "Child process created");
 
           close(fd[0]); // read channel close
@@ -122,14 +239,14 @@ int main(int argc, char * argv[]) {
           for (long long i = 1; i <= (input / 2); i++) {
           	printf("argc %s\n", "i am here 8");
             printf("INPUT IS %llu", input);
-          	if (input % i == 0) {
+            if (input % i == 0) {
               //is a factor
-          		firstfactors[indexff] = i;
-          		indexff++;
-          		printf("argc %s\n", "i am here 4");
+              firstfactors[indexff] = i;
+              indexff++;
+              printf("argc %s\n", "i am here 4");
 
 
-          	}
+            }
 
           }
 
@@ -143,8 +260,8 @@ int main(int argc, char * argv[]) {
           wait(&status); // Wait for Parent to read everything and exit
           exit(0);
 
+        }
+
       }
 
-  }
-
-}
+    }
