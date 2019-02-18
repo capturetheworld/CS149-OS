@@ -7,7 +7,7 @@
 #include <sys/wait.h>
 #define MAX 100
 long long int inputList[100]; //global input array of long long integers
-int inputTally; //global integer of index of last element in inputList (starts at 0)
+int inputTally; //global integer counter
 char* inputPointers[MAX];
 
 //implicit declarations
@@ -81,7 +81,7 @@ void verifyInput(){
 
 
 
-  for(int j = 0; j<=inputTally; j++){
+  for(int j = 0; j<inputTally; j++){
 
     printf("\ninput tally is %d", inputTally);
 
@@ -130,7 +130,7 @@ void verifyInput(){
 
 void computeFactors() {
 
-  for(int i = 0; i<=inputTally; i++){
+  for(int i = 0; i<inputTally; i++){
 
    printf("\n The following inputs: %llu", inputList[i]);
 
