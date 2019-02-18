@@ -86,10 +86,12 @@ void verifyInput(){
     printf("\ninput tally is %d", inputTally);
 
 
-    char* toTest = inputPointers[j];
-    printf("\n totest %s", toTest);
+    //char* toTest = inputPointers[j];
+    //printf("\n totest %s", toTest);
 
-     //int length = strlen(toTest); //grab length of each input
+     int length = strlen(inputPointers[j]); //grab length of each input
+
+     printf("\n length is %d", length);
 
       // for (int k = 0; k < length; k++)
       //     {
