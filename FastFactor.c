@@ -163,6 +163,8 @@ int main(int argc, char * argv[]) {
         exit(1);
       }
 
+      printf(" The line is 5");
+
 
 
       while ((memory_read = getline(&pointer, &n, stdin)) != -1){
@@ -170,7 +172,7 @@ int main(int argc, char * argv[]) {
         //printf(" The line is %s\n", pointers);
          printf(" The line is 1");
 
-        inputPointers[inputTally] = pointer;
+        //inputPointers[inputTally] = pointer;
         inputTally++;
         pointer++;
       }
@@ -178,6 +180,8 @@ int main(int argc, char * argv[]) {
 
     }
     else{ //command line input
+
+      printf(" The line is 6");
 
       inputTally = 0; //reset inputTally
 
