@@ -150,14 +150,9 @@ int main(int argc, char * argv[]) {
   size_t n =32; //buffer size
   size_t memory_read;
 
-  if(argc <= 1){ //only inputed program name
-    printf("\n this is argc %d", argc);
-    printf("\n this is argv %s", argv[1]);
-    hasError(4);
-  }
 
 
-  if(argc == 3 && *argv[1] == '<'){ //only possible case for < file redirect
+  if(argc == 1 || *argv[1] == NULL){ //only possible case for < file redirect
 
      inputTally = 0;//reset input tally
 
