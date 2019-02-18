@@ -14,55 +14,49 @@ char* inputPointers[MAX];
 
 void convertPointer(int inputIndex){
 
-    char * invalid;
+  char * invalid;
 
 
-    inputList[inputIndex] =  strtol(inputPointers[inputIndex], &invalid, 10);
+  inputList[inputIndex] =  strtol(inputPointers[inputIndex], &invalid, 10);
+
+
+}
+
+
+void hasError(int errorNum){
+
+  if(errorNum == 1){
+    printf("\nFound a non-numerical number, use only numerical numbers");
+    exit(-1);
 
 
   }
+  else if(errorNum == 2){
 
+    printf("\nFound a negative number or 0, use only positive numerical numbers");
+    exit(-1);
 
-  void hasError(int errorNum){
-
-    if(errorNum == 1){
-      printf("\nFound a non-numerical number, use only numerical numbers");
-      exit(-1);
-
-
-    }
-    else if(errorNum == 2){
-
-      printf("\nFound a negative number or 0, use only positive numerical numbers");
-      exit(-1);
-      
-    }
-    else if(errorNum == 3){
+  }
+  else if(errorNum == 3){
 
       //printf("\nCan't factor 1, it is only itself");
-      printf("\n1: 1");
-      exit(-1);
-
-      
-    }
-
-    else if(errorNum == 4){
-
-      printf("\nNo input was detected");
-      exit(-1);
-
-      
-    }
-    else {
-
-      printf("\n Unknown error occured");
-      exit(-1);
+    printf("\n1: 1");
+    exit(-1);
 
 
-    }
+  }
+
+  else if(errorNum == 4){
+
+    printf("\nNo input was detected");
+    exit(-1);
 
 
+  }
+  else {
 
+    printf("\n Unknown error occured");
+    exit(-1);
 
 
   }
@@ -71,23 +65,29 @@ void convertPointer(int inputIndex){
 
 
 
+}
 
 
 
 
 
-  void verifyInput(){
-
-      
 
 
-    for(int j = 0; j<=inputTally; j++){
-
-      printf("input tally is %d", inputTally);
 
 
-      char* toTest = inputPointers[j];
-       printf("to test %s", toTest);
+
+void verifyInput(){
+
+
+
+
+  for(int j = 0; j<=inputTally; j++){
+
+    printf("\ninput tally is %d", inputTally);
+
+
+    char* toTest = inputPointers[j];
+    printf("\n totest %s", toTest);
 
      //int length = strlen(toTest); //grab length of each input
 
@@ -117,13 +117,13 @@ void convertPointer(int inputIndex){
       //   hasError(3);
 
       // }
-    }
   }
+}
 
-  
 
 
-  
+
+
 
 
 
@@ -132,15 +132,15 @@ void computeFactors() {
 
   for(int i = 0; i<=inputTally; i++){
 
-     printf("\n The following inputs: %llu", inputList[i]);
+   printf("\n The following inputs: %llu", inputList[i]);
 
 
 
 
 
-  }
+ }
 
-  	
+
 
 }
 
@@ -161,31 +161,33 @@ int main(int argc, char * argv[]) {
      inputTally = 0;//reset input tally
 
 
-      pointer = (char *)malloc(n * sizeof(char));
-      if (pointer == NULL){
-        printf("Unable to allocate memory");
-        exit(1);
-      }
-
-      printf(" The line is 5");
-
-
-
-      while ((getline(&pointer, &n, stdin)) != -1){
-        
-        //printf(" The line is %s\n", pointers);
-         printf(" The line is 1");
-
-        inputPointers[inputTally] = pointer;
-        inputTally++;
-        pointer++;
-      }
-
-
+     pointer = (char *)malloc(n * sizeof(char));
+     if (pointer == NULL){
+      printf("Unable to allocate memory");
+      exit(1);
     }
+
+   // printf(" The line is 5");
+
+
+
+    while ((getline(&pointer, &n, stdin)) != -1){
+
+        //printf(" The line is %s\n", pointers);
+
+
+      inputPointers[inputTally] = pointer;
+      inputTally++;
+      pointer++;
+    }
+
+    printf("\ninput tally main is %d", inputTally);
+
+
+  }
     else{ //command line input
 
-      printf(" The line is 6");
+
 
       inputTally = 0; //reset inputTally
 
@@ -194,21 +196,25 @@ int main(int argc, char * argv[]) {
         inputPointers[inputTally] = argv[argc]; //place argv elements into argc, end at element before argc e.g. (0[X]1[X]2[] argc =2)
         inputTally++; //increment input tally, should have index of last elements
       }
+
+      printf("\ninput tally main is %d", inputTally);
+
+
     }
 
     
 
-  
+
 
 
   // done with input run conversion spit out errors
 
-printf("\nThe line is 2");
-  verifyInput();
-  printf("\nThe line is 3");
+
+    verifyInput();
+
 //  computeFactors();
 
 
 
 
-}
+  }
