@@ -183,6 +183,8 @@ int main(int argc, char * argv[]) {
       printf("\n The inputted value is %s", inputPointers[inputTally]);
       inputTally++;
       pointer++;
+
+       pointer = (char *)malloc(n * sizeof(char));
     }
 
     printf("\ninput tally main is %d", inputTally);
