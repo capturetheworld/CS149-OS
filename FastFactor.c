@@ -83,6 +83,9 @@ void convertPointer(int inputIndex){
 
     for(int j = 0; j<=inputTally; j++){
 
+      printf("input tally is %d", inputTally);
+
+
       //char* toTest = inputPointers[j];
 
      // int length = strlen(toTest); //grab length of each input
@@ -96,23 +99,23 @@ void convertPointer(int inputIndex){
       //     }
 
 
-      convertPointer(j);
+      // convertPointer(j);
 
 
 
 
-      if (inputList[j] <= 0) { //is negative or 0
-        hasError(2);
+      // if (inputList[j] <= 0) { //is negative or 0
+      //   hasError(2);
 
     
 
-      }
+      // }
 
-      if (inputList[j] == 1){
+      // if (inputList[j] == 1){
 
-        hasError(3);
+      //   hasError(3);
 
-      }
+      // }
     }
   }
 
