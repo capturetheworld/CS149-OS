@@ -12,52 +12,7 @@ char* inputPointers[MAX];
 
 //implicit declarations
 
-
-
-
-
-
-
-
-
-
-  void verifyInput(){
-
-      
-
-
-    for(int j = 0; j<=inputTally; j++){
-
-      int length = strlen(inputPointers[j]); //grab length of each input
-
-      for (int k = 0; i < length; k++)
-          {
-            if (!isdigit(  inputPointers[j[k]] )) //should grab first char of the char in the array
-              hasError(1);
-          }
-
-
-      convertPointer(j);
-
-
-
-
-      if (inputList[j] <= 0) { //is negative or 0
-        hasError(2);
-
-    
-
-      }
-
-      if (inputList[j] == 1){
-
-        hasError(3);
-
-      }
-    }
-  }
-
-  void convertPointer(int inputIndex){
+void convertPointer(int inputIndex){
 
     char * invalid;
 
@@ -111,6 +66,53 @@ char* inputPointers[MAX];
 
 
   }
+
+
+
+
+
+
+
+
+
+
+  void verifyInput(){
+
+      
+
+
+    for(int j = 0; j<=inputTally; j++){
+
+      int length = strlen(inputPointers[j]); //grab length of each input
+
+      for (int k = 0; k < length; k++)
+          {
+            if (!isdigit(  inputPointers[j[k]] )) //should grab first char of the char in the array
+              hasError(1);
+          }
+
+
+      convertPointer(j);
+
+
+
+
+      if (inputList[j] <= 0) { //is negative or 0
+        hasError(2);
+
+    
+
+      }
+
+      if (inputList[j] == 1){
+
+        hasError(3);
+
+      }
+    }
+  }
+
+  
 
 
   
