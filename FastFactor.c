@@ -193,7 +193,7 @@ int main(int argc, char * argv[]) {
 
 
   verifyInput();
-  computerFactors();
+  computeFactors();
 
 
 
