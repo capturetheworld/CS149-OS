@@ -168,6 +168,7 @@ int main(int argc, char * argv[]) {
       while ((memory_read = getline(&pointer, &n, stdin)) != -1){
         //  memory_read = getline(&pointers, &buf_sz, stdin); {
         //printf(" The line is %s\n", pointers);
+         printf(" The line is 1");
 
         inputPointers[inputTally] = pointer;
         inputTally++;
@@ -194,8 +195,9 @@ int main(int argc, char * argv[]) {
 
   // done with input run conversion spit out errors
 
-
+printf(" The line is 2");
   verifyInput();
+  printf(" The line is 3");
   computeFactors();
 
 
