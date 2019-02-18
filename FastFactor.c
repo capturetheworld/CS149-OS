@@ -171,12 +171,12 @@ int main(int argc, char * argv[]) {
 
 
 
-      while ((memory_read = getline(&pointer, &n, stdin)) != -1){
-        //  memory_read = getline(&pointers, &buf_sz, stdin); {
+      while ((getline(&pointer, &n, stdin)) != -1){
+        
         //printf(" The line is %s\n", pointers);
          printf(" The line is 1");
 
-        //inputPointers[inputTally] = pointer;
+        inputPointers[inputTally] = pointer;
         inputTally++;
         pointer++;
       }
