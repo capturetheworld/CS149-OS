@@ -83,11 +83,13 @@ void convertPointer(int inputIndex){
 
     for(int j = 0; j<=inputTally; j++){
 
-      int length = strlen(inputPointers[j]); //grab length of each input
+      char* toTest = inputPointers[j];
+
+      int length = strlen(toTest); //grab length of each input
 
       for (int k = 0; k < length; k++)
           {
-            if (!isdigit(  inputPointers[j[k]] )) //should grab first char of the char in the array
+            if (!isdigit(toTest[k])) //should grab first char of the char in the array
               hasError(1);
           }
 
