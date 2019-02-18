@@ -173,10 +173,12 @@ int main(int argc, char * argv[]) {
 
     while ((getline(&pointer, &n, stdin)) != -1){
 
-        //printf(" The line is %s\n", pointers);
+        printf("\n The pointer to be inputted is %s", pointer);
 
 
       inputPointers[inputTally] = pointer;
+
+      printf("\n The inputted value is %s", inputPointers[inputTally]);
       inputTally++;
       pointer++;
     }
