@@ -152,6 +152,7 @@ int main(int argc, char * argv[]) {
 
   if(argc <= 1){ //only inputed program name
     printf("\n this is argc %d", argc);
+    printf("\n this is argv %s", argv[1]);
     hasError(4);
   }
 
