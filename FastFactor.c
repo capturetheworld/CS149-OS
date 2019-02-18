@@ -95,7 +95,7 @@ void verifyInput(){
 
        for (int k = 0; k < length; k++)
             {
-             printf("BRACKET K %c", inputPointers[j][k]);
+             printf("\nVALUE IN STRING LEN %c \n", inputPointers[j][k]);
       //       // if (!isdigit(toTest[k])) //should grab first char of the char in the array
 
       //       //   hasError(1);
