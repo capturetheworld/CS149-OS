@@ -89,7 +89,9 @@ void convertPointer(int inputIndex){
 
       for (int k = 0; k < length; k++)
           {
+            printf("BRACKET K %c", toTest[k]);
             if (!isdigit(toTest[k])) //should grab first char of the char in the array
+
               hasError(1);
           }
 
