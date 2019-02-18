@@ -152,7 +152,7 @@ int main(int argc, char * argv[]) {
 
 
 
-  if(argc == 1 || *argv[1] == NULL){ //only possible case for < file redirect
+  if(argc == 1 || argv[1] == NULL){ //only possible case for < file redirect
 
      inputTally = 0;//reset input tally
 
