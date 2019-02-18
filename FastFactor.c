@@ -83,7 +83,7 @@ void convertPointer(int inputIndex){
 
     for(int j = 0; j<=inputTally; j++){
 
-      char* toTest = inputPointers[j];
+      //char* toTest = inputPointers[j];
 
      // int length = strlen(toTest); //grab length of each input
 
