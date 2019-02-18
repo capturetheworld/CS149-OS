@@ -200,9 +200,9 @@ int main(int argc, char * argv[]) {
   // done with input run conversion spit out errors
 
 printf(" The line is 2");
-  verifyInput();
+  //verifyInput();
   printf(" The line is 3");
-  computeFactors();
+//  computeFactors();
 
 
 
