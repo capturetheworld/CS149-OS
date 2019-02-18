@@ -11,10 +11,7 @@ char* inputPointers[MAX];
 
 //implicit declarations
 
-void hasError();
-void computeFactors();
-void verifyInput();
-void convertPointer();
+
 
 
 
