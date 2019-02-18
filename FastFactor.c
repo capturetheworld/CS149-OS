@@ -6,8 +6,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #define MAX 100
-extern long long int inputList[100]; //global input array of long long integers
-extern int inputTally; //global integer of index of last element in inputList (starts at 0)
+long long int inputList[100]; //global input array of long long integers
+int inputTally; //global integer of index of last element in inputList (starts at 0)
 char* inputPointers[MAX];
 
 //implicit declarations
