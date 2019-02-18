@@ -87,6 +87,7 @@ void convertPointer(int inputIndex){
 
 
       char* toTest = inputPointers[j];
+       printf("to test %s", toTest);
 
      //int length = strlen(toTest); //grab length of each input
 
