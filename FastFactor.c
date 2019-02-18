@@ -151,6 +151,7 @@ int main(int argc, char * argv[]) {
   size_t memory_read;
 
   if(argc <= 1){ //only inputed program name
+    printf("\n this is argc %d", argc);
     hasError(4);
   }
 
