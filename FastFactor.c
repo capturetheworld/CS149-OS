@@ -17,7 +17,7 @@ void convertPointer(int inputIndex){
     char * invalid;
 
 
-    inputList[inputIndex] =  strtol(inputPointers[inputIndex], & invalid, 10);
+    inputList[inputIndex] =  strtol(inputPointers[inputIndex], &invalid, 10);
 
 
   }
@@ -151,7 +151,7 @@ int main(int argc, char * argv[]) {
   }
 
 
-  if(argc == 3 && argv[1] == '<'){ //only possible case for < file redirect
+  if(argc == 3 && *argv[1] == '<'){ //only possible case for < file redirect
 
      inputTally = 0;//reset input tally
 
