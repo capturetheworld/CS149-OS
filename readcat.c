@@ -11,8 +11,8 @@ void main(int argc, char * argv[]){
 
 
 
-    long long [] master_array = new long long [MAX];
-    masterindex = 0;
+    long long  master_array[MAX];
+    int masterindex = 0;
 
 
     if(argc == 1){
@@ -25,7 +25,7 @@ void main(int argc, char * argv[]){
         	long long temp = strtoll(storage, &end, 10);
 
         	master_array[masterindex] = temp;
-        	
+
         	masterindex++;
 
 
