@@ -35,8 +35,10 @@ void main(int argc, char * argv[]){
         	
         }
 
+        int i=masterindex-1;
 
-        for (masterindex-1; masterindex>=0; masterindex--){
+
+        for (i; i>=0; i--){
 
         	printf("the number is: %llu \n", master_array[masterindex]);
 
