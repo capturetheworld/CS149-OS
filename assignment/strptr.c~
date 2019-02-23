@@ -1,0 +1,14 @@
+#include "util.h"
+
+/** Instruction: Assignment 4: complie like "gcc -o strptr.c strptr
+ * Please note I have used a util.h as header file
+ * 1)If you are successful with either assignment 1 or 2 or better yet use both if both are successful as input
+ * 2) use getline to read a command line "< nums , check for user error like no input 
+ * 3) store them in a str ptr array
+ * 4) create a function called printLLArray(long long input[MAX]) to print out the input array passed to it by 
+ * using either while loop or for loop.
+ * */
+
+void printStrArray(
+
+
