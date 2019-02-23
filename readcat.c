@@ -36,6 +36,14 @@ void main(int argc, char * argv[]){
         }
 
 
+        for (masterindex; masterindex>=0; masterindex--){
+
+        	printf("the number is: %llu \n", master_arry[masterindex]);
+
+
+        }
+
+
 
 
 
