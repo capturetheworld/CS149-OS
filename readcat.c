@@ -1,7 +1,14 @@
 #include "util.h"
 
 
-void main(int argc, char * argv[]){
+void printStrArray(char * toPrint[],char * id ){
+
+
+    
+}
+
+
+int main(int argc, char * argv[]){
 
     char *storage = NULL;
     size_t n =0;
@@ -35,13 +42,13 @@ void main(int argc, char * argv[]){
         	
         }
 
-        int i=(masterindex-1);
+      
 
 
-        for (i; i>=0; i--){
+        for (int i=(masterindex-1); i>=0; i--){
             printf("the i: %d",i);
 
-        	printf("the number is: %llu \n", master_array[masterindex]);
+        	printf("the number is: %llu \n", master_array[i]);
 
 
         }
