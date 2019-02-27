@@ -4,6 +4,6 @@
 
 
 main(){
-	execlp("slep","sleep","1000"); //need a null at the end of exec lp
+	execlp("slep","sleep","1000", NULL); //need a null at the end of exec lp
 	printf("ran sleep");
 }
