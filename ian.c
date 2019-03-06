@@ -12,60 +12,69 @@ char* inputPointers[MAX];
 
 //implicit declarations
 
-void convertPointer(int inputIndex){
-
-  char * invalid;
-
-
-  inputList[inputIndex] =  strtol(inputPointers[inputIndex], &invalid, 10);
-
-
-}
 
 
 void hasError(int errorNum){
 
-  if(errorNum == 1){
-    printf("\nFound a non-numerical number, use only numerical numbers");
-    exit(-1);
+if(errorNum == 1){
+ printf("\nFound a non-numerical number, use only numerical numbers");
+ exit(-1);
 
 
-  }
-  else if(errorNum == 2){
+}
+else if(errorNum == 2){
 
-    printf("\nFound a negative number or 0, use only positive numerical numbers");
-    exit(-1);
+ printf("\nFound a negative number or 0, use only positive numerical numbers");
+ exit(-1);
 
-  }
-  else if(errorNum == 3){
+}
+else if(errorNum == 3){
 
       //printf("\nCan't factor 1, it is only itself");
-    printf("\n1: 1");
-    exit(-1);
+ printf("\n1: 1");
+ exit(-1);
 
 
-  }
+}
 
-  else if(errorNum == 4){
+else if(errorNum == 4){
 
-    printf("\nNo input was detected");
-    exit(-1);
-
-
-  }
-  else {
-
-    printf("\n Unknown error occured");
-    exit(-1);
+ printf("\nNo input was detected");
+ exit(-1);
 
 
-  }
+}
+else {
+
+ printf("\n Unknown error occured");
+ exit(-1);
+
+
+}
 
 
 
 
 
 }
+
+void convertString(int inputIndex){
+
+char * invalid;
+
+long long int temp =  strtoll(inputPointers[inputIndex], &invalid, 10);
+
+if(invalid == NULL){
+
+ inputList[inputIndex] =  temp;
+}
+else {
+
+ hasError(1);
+}
+
+}
+
 
 
 
@@ -78,53 +87,53 @@ void hasError(int errorNum){
 
 void verifyInput(){
 
+if(inputTally ==0){
+ printf("we are here 2 \n");
+ hasError(4);
+}
+
+
+printf("\nverifyInputv erifinput pointers here %s  \n", inputPointers[0]);
+     int length = strlen(inputPointers[0]); //grab length of each input
+     printf("\nlength is %d\n",length);
+
+
+for(int j = 0; j<inputTally; j++){
+
+ printf("\ninput tally is %d \n", inputTally);
+
+
+printf("\nverifyInput index is %d input pointers here %s  \n",j, inputPointers[j]);
+
+     //int length = strlen(inputPointers[j]); //grab length of each input
 
 
 
-  for(int j = 0; j<inputTally; j++){
+     if(length ==0){
+       printf("input pointers %s  \n", inputPointers[j]);
 
-    printf("\ninput tally is %d", inputTally);
+      hasError(4);
+     }
+     else{
 
-
-    //char* toTest = inputPointers[j];
-    //printf("\n totest %s", toTest);
-
-     printf("\n*** length is  the str is %s****\n", inputPointers[j]);
-     int length = strlen(inputPointers[j]); //grab length of each input
-
-     char tmp[MAX];
-  //   tmp = inputPointers[j];
-     printf("\n*** length is %d the str is %s****\n", length,inputPointers[j]);
-
-       for (int k = 0; k < length; k++)
-           {
-		   if(isdigit(inputPointers[j][k]) )
-			   printf("the index is %d, the char is %c\n",k,inputPointers[j][k]);
-      //       printf("BRACKET K %c", toTest[k]);
-      //       // if (!isdigit(toTest[k])) //should grab first char of the char in the array
-
-      //       //   hasError(1);
-           }
+    //  convertString(j);
 
 
-      // convertPointer(j);
+     }
+
+     // printf("\n length is %d", length);
+
+     //   for (int k = 0; k < length; k++)
+     //        {
+     //         printf("\nVALUE IN STRING LEN %c \n", inputPointers[j][k]);
+
+     //       }
 
 
 
 
-      // if (inputList[j] <= 0) { //is negative or 0
-      //   hasError(2);
+ }
 
-    
-
-      // }
-
-      // if (inputList[j] == 1){
-
-      //   hasError(3);
-
-      // }
-  }
 }
 
 
@@ -137,17 +146,11 @@ void verifyInput(){
 
 void computeFactors() {
 
-  for(int i = 0; i<inputTally; i++){
+for(int i = 0; i<inputTally; i++){
 
-   printf("\n The following inputs: %llu", inputList[i]);
+ printf("\n The following inputs: %llu", inputList[i]);
 
-
-
-
-
- }
-
-
+}
 
 }
 
@@ -155,52 +158,41 @@ void computeFactors() {
 
 int main(int argc, char * argv[]) {
 
-  //c for dummies
-  char *pointer;
-  
-  size_t n =32; //buffer size
-  size_t memory_read;
+char *storage = NULL;
+size_t n =0;
 
 
 
-  if(argc == 1 || argv[1] == NULL){ //only possible case for < file redirect
+  if(argc == 1){ //only possible case for < file redirect
 
-int     inputTally = 0;//reset input tally
-
-
-     pointer = (char *)malloc(n * sizeof(char));
-     if (pointer == NULL){
-      printf("Unable to allocate memory");
-      exit(1);
-    }
-
-   // printf(" The line is 5");
+     inputTally = 0;//reset input tally
 
 
-    while ((getline(&pointer, &n, stdin)) != -1){
-if(inputTally>0)
-        printf("\n The pointer to be inputted is %s", pointer);
+     while (getline(&storage, &n, stdin) != -1){
+
+      printf("\n The pointer to be inputted is %s", storage);
 
 
-      inputPointers[inputTally] = pointer;
+      inputPointers[inputTally] = storage;
 
-      printf("\n The inputted value is %s", inputPointers[inputTally]);
+      printf("input TALLY IN MAIN METHOD %s  \n", inputPointers[inputTally]);
+
+
+     // printf("\n The inputted value is %s", inputPointers[inputTally]);
       inputTally++;
-      pointer++;
-     pointer = (char *)malloc(n * sizeof(char));
-    }
+      
 
-    int r=0;
-    while (r<inputTally){
-	printf("\n^^^he string is %s\n",inputPointers[r]);
-	r++;
-    }
+      
+     }
 
-    printf("\ninput tally main is %d", inputTally);
+     printf("\ninput tally main is %d", inputTally);
+     
+verifyInput();
 
 
-  }
+ }
     else{ //command line input
+
 
 
       inputTally = 0; //reset inputTally
@@ -209,29 +201,29 @@ if(inputTally>0)
 
         inputPointers[inputTally] = argv[argc]; //place argv elements into argc, end at element before argc e.g. (0[X]1[X]2[] argc =2)
         inputTally++; //increment input tally, should have index of last elements
-      }
-
-      printf("\ninput tally main is %d", inputTally);
-
-
     }
-	printf("the first string is %s\n",inputPointers[0]);
-int index;
-for (index=0; index<strlen(inputPointers[0]);index++){
 
-		printf("char in first string is %c\n",inputPointers[0][index]);
-		}
+    printf("\ninput tally main is %d", inputTally);
+
+
+}
+
+
+
+
+
+
   // done with input run conversion spit out errors
 
 
-    verifyInput();
+//verifyInput();
 
 //  computeFactors();
 
 
 
 
-  }
+}
 
 
 

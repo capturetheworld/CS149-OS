@@ -1,6 +1,7 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h> /* strtoll */ 
-#include <ctype.h> 
+#include <ctype.h>
+#include <string.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -150,6 +151,7 @@ int main(int argc, char * argv[]) {
 		}
 	}
 
+// Global Variables
 
 	printArray(pointers_array,"\nTesting pointers_array"); //debug
 
@@ -175,17 +177,24 @@ int main(int argc, char * argv[]) {
     		printf("%s\n", "Error, only enter numbers and positive numbers greater than 0.");
     		exit(0);
 
-    	}
+long long int inputList[100]; //global input array of long long integers
+int inputTally;  //global integer counter
+char* inputPointers[MAX];
+
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
 
 
     	fflush(stdin);
 
     	int pid = fork();
 
-    	if (pid < 0) {
-    		printf("argc %s\n", "i am here 11");
-    		printf("%s\n", "Couldn't split processes");
-    		exit(-1);
+
+void hasError(int errorNum){
 
     	}
       //S/O modified to fit with long long
@@ -242,8 +251,45 @@ printLLArray(child_array,"\nChildArray in child process has");
           	//firstRangeFactors(input); 
           }
 
+	if(errorNum == 1){
+		printf("\nFound a non-numerical number, use only numerical numbers");
+		exit(-1);
+	}
+	else if(errorNum == 2){
+		printf("\nFound a negative number or 0, use only positive numerical numbers");
+		exit(-1);
+	}
+	else if(errorNum == 3){
+		printf("\n1: 1");
+		exit(-1);
+	}
+	else if(errorNum == 4){
+		printf("\nNo input was detected");
+		exit(-1);
+	}
+	else {
+		printf("\n Unknown error occured");
+		exit(-1);
+	}
+}
 
-      }
 
+void convertString(int inputIndex){
+	char * invalid;
+	long long int temp = strtoll(inputPointers[inputIndex], &invalid, 10);
+
+	if(invalid == NULL){
+		inputList[inputIndex] = temp;
+
+	}
+	else {
+		hasError(1);
+	}
 
 }
+
+//////////////////////PRINT OUT ARRAYS////////////////////////
+
+
+//////////////////////VERIFY////////////////////////
+
