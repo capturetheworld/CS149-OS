@@ -1,0 +1,12 @@
+#include "util.h"
+
+/** Instruction: Assignment 1: complie like "gcc -o getcmd getcmd
+ * Please note I have used a util.h as header file
+ * 1)use getline to read a command line option 48,54 , check for user error like no input 
+ * 1a) Convert the string to long long
+ * 2) put it in a long long array
+ * 3) add 1 to each input
+ * 4) printf the result to stdout
+ *
+ * */
+

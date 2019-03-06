@@ -1,0 +1,8 @@
+1)playargc.c
+2)readcat.c
+3)readcmd.c
+4)ptr.c
+5)combineArrays.c
+6)extractArray.c
+7)getfactor.c
+8)forkpipe.c
