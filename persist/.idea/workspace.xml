@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="ForAll" targetName="ForAll" />
+      <config projectName="persist" targetName="persist" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,13 +11,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631f5f47-dd0b-4941-a1ca-ef25efda378a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.out" beforeDir="false" afterPath="$PROJECT_DIR$/1.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forall" beforeDir="false" afterPath="$PROJECT_DIR$/forall" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forall.c" beforeDir="false" afterPath="$PROJECT_DIR$/forall.c" afterDir="false" />
+    <list default="true" id="025fef53-9e06-4fb3-aed5-12a59f94ff2c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memdb.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ForAll/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ForAll/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ForAll/1.out" beforeDir="false" afterPath="$PROJECT_DIR$/../ForAll/1.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ForAll/2.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ForAll/3.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ForAll/forall" beforeDir="false" afterPath="$PROJECT_DIR$/../ForAll/forall" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ForAll/forall.c" beforeDir="false" afterPath="$PROJECT_DIR$/../ForAll/forall.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,10 +32,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/forall.c">
+        <entry file="file://$PROJECT_DIR$/memdb.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="437">
+              <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/memdb.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -41,36 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>usr1</find>
-      <find>sigqui</find>
-      <find>sigqu</find>
-      <find>stat</find>
-      <find>fileCounter</find>
-      <find>int fd1out</find>
-      <find>sign</find>
-      <find>empt</find>
-      <find>wait</find>
-      <find>ign</find>
-      <find>userhan</find>
-      <find>sigact</find>
-      <find>pid</find>
-      <find>signalling</find>
-      <find>getpid</find>
-      <find>sig_ign</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -79,15 +61,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/forall.c" />
+        <option value="$PROJECT_DIR$/persist.c" />
+        <option value="$PROJECT_DIR$/memdb.c" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="237" />
+    <option name="x" value="167" />
+    <option name="y" value="478" />
     <option name="width" value="1440" />
-    <option name="height" value="606" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -99,8 +82,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="ForAll" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ForAll" type="462c0819:PsiDirectoryNode" />
+              <item name="persist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="persist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -113,11 +96,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -132,7 +110,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="ForAll" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ForAll" TARGET_NAME="ForAll" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ForAll" RUN_TARGET_NAME="ForAll">
+    <configuration name="persist" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="persist" TARGET_NAME="persist" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="persist" RUN_TARGET_NAME="persist">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -143,41 +121,39 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="631f5f47-dd0b-4941-a1ca-ef25efda378a" name="Default Changelist" comment="" />
-      <created>1551921101351</created>
+      <changelist id="025fef53-9e06-4fb3-aed5-12a59f94ff2c" name="Default Changelist" comment="" />
+      <created>1553348184502</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551921101351</updated>
-      <workItem from="1551921106468" duration="4454000" />
-      <workItem from="1552093759400" duration="13721000" />
-      <workItem from="1552260130413" duration="2522000" />
-      <workItem from="1553348096464" duration="86000" />
+      <updated>1553348184502</updated>
+      <workItem from="1553348185841" duration="505000" />
+      <workItem from="1554031942381" duration="4857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20783000" />
+    <option name="totallyTimeSpent" value="5362000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="237" width="1440" height="606" extended-state="0" />
+    <frame x="179" y="25" width="1440" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09942775" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08798283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31086656" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32896653" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.083657585" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.26040062" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32896653" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32879376" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -189,20 +165,27 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.c" />
-    <entry file="file://$PROJECT_DIR$/forall.c">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="75">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/memdb.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/memdb.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="437">
+          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -11,32 +11,9 @@ int fd1out;
 
  void userHandler(int sig)
 {
-    const char * sig_name;
-    switch(sig){
 
-
-        case  SIGINT:
-            close(1);
-            dup(saved_stdout);
-            printf("Signalling %d\n",getpid());
-            int pid2 = getpid();
-            fflush(stdout);
-            close(1);
-            fd1out =open(fileCounter,O_WRONLY | O_CREAT | O_APPEND);
-            return;
-
-        case  SIGQUIT:
-            close(1);
-            dup(saved_stdout);
-            printf("Signalling %d\n",getpid());
-            fflush(stdout);
-            close(1);
-            kill(getpid(),SIGQUIT);
-            fd1out =open(fileCounter,O_WRONLY | O_CREAT | O_APPEND);
-            return;
-        default:
-            printf("No signal\n");
-
+    if(sig == 2){
+        exit(0);
     }
 }
 
@@ -80,7 +57,11 @@ int main(int argc, char * argv[]) {
 
            if (pid < 0) {
                printf("error forking");
-           } else if (pid == 0) {
+           }
+
+
+           else if (pid == 0) {
+               sa.sa_handler = &userHandler;
 
                 fd1out = open(fileCounter, O_WRONLY | O_CREAT | O_APPEND);
 
@@ -101,8 +82,8 @@ int main(int argc, char * argv[]) {
                fflush(stdout);
 
 
-              // sa.sa_handler = SIG_IGN;
-              // sigaction(SIGUSR1, &sa, NULL);
+
+              //sigaction(SIGUSR1, &sa, NULL);
               // perror("printing error here");
 
 
@@ -119,6 +100,17 @@ int main(int argc, char * argv[]) {
            } else {//parent
 
 
+               if(sigaction(SIGINT, &sa, NULL) == -1){
+                   perror("sigaction SIGINT");
+                   exit(errno);
+               }
+
+               if(sigaction(SIGQUIT, &sa, NULL) == -1){
+                   perror("sigaction SIGQUIT");
+                   exit(errno);
+               }
+
+
 
 
 
@@ -126,7 +118,8 @@ int main(int argc, char * argv[]) {
 
                    FILE *writeTo = fopen(fileCounter, "a");
                    int stat;
-               pid_t childPID = waitpid(pid, &stat, 0);
+                waitpid(pid, &stat, 0);
+                kill(pid, SIGINT);
 
 
                printf("STAT IS: %d WEXITSTATUS: %d \n", stat, WEXITSTATUS(stat));
@@ -151,17 +144,8 @@ int main(int argc, char * argv[]) {
 
 
 
-       \
 
-               if(sigaction(SIGINT, &sa, NULL) == -1){
-                   perror("sigaction SIGINT");
-                   exit(errno);
-               }
 
-               if(sigaction(SIGQUIT, &sa, NULL) == -1){
-                   perror("sigaction SIGQUIT");
-                   exit(errno);
-               }
 
 
 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ian/Documents/GitHub/CS149-OS/persist/memdb.c
+stdio.h
+-
+sys/mman.h
+-
+stdlib.h
+-
+fcntl.h
+-
+sys/stat.h
+-
+zconf.h
+-
+string.h
+-
+
