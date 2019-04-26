@@ -57,27 +57,27 @@ include CMakeFiles/memdbfinal.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/memdbfinal.dir/flags.make
 
-CMakeFiles/memdbfinal.dir/main.c.o: CMakeFiles/memdbfinal.dir/flags.make
-CMakeFiles/memdbfinal.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/memdbfinal.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/memdbfinal.dir/main.c.o   -c /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/main.c
+CMakeFiles/memdbfinal.dir/memdb.c.o: CMakeFiles/memdbfinal.dir/flags.make
+CMakeFiles/memdbfinal.dir/memdb.c.o: ../memdb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/memdbfinal.dir/memdb.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/memdbfinal.dir/memdb.c.o   -c /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/memdb.c
 
-CMakeFiles/memdbfinal.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/memdbfinal.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/main.c > CMakeFiles/memdbfinal.dir/main.c.i
+CMakeFiles/memdbfinal.dir/memdb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/memdbfinal.dir/memdb.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/memdb.c > CMakeFiles/memdbfinal.dir/memdb.c.i
 
-CMakeFiles/memdbfinal.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/memdbfinal.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/main.c -o CMakeFiles/memdbfinal.dir/main.c.s
+CMakeFiles/memdbfinal.dir/memdb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/memdbfinal.dir/memdb.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/memdb.c -o CMakeFiles/memdbfinal.dir/memdb.c.s
 
 # Object files for target memdbfinal
 memdbfinal_OBJECTS = \
-"CMakeFiles/memdbfinal.dir/main.c.o"
+"CMakeFiles/memdbfinal.dir/memdb.c.o"
 
 # External object files for target memdbfinal
 memdbfinal_EXTERNAL_OBJECTS =
 
-memdbfinal: CMakeFiles/memdbfinal.dir/main.c.o
+memdbfinal: CMakeFiles/memdbfinal.dir/memdb.c.o
 memdbfinal: CMakeFiles/memdbfinal.dir/build.make
 memdbfinal: CMakeFiles/memdbfinal.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable memdbfinal"

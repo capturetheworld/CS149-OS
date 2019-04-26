@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/ian/Documents/GitHub/CS149-OS/memdbfinal/main.c" "/Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug/CMakeFiles/memdbfinal.dir/main.c.o"
+  "/Users/ian/Documents/GitHub/CS149-OS/prodcon/prodcon.c" "/Users/ian/Documents/GitHub/CS149-OS/prodcon/cmake-build-debug/CMakeFiles/prodcon.dir/prodcon.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

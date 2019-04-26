@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/memdbfinal.dir/main.c.o"
+  "CMakeFiles/memdbfinal.dir/memdb.c.o"
   "memdbfinal.pdb"
   "memdbfinal"
 )

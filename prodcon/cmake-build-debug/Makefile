@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ian/Documents/GitHub/CS149-OS/memdbfinal
+CMAKE_SOURCE_DIR = /Users/ian/Documents/GitHub/CS149-OS/prodcon
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ian/Documents/GitHub/CS149-OS/prodcon/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug/CMakeFiles /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ian/Documents/GitHub/CS149-OS/prodcon/cmake-build-debug/CMakeFiles /Users/ian/Documents/GitHub/CS149-OS/prodcon/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ian/Documents/GitHub/CS149-OS/memdbfinal/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ian/Documents/GitHub/CS149-OS/prodcon/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named memdbfinal
+# Target rules for targets named prodcon
 
 # Build rule for target.
-memdbfinal: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 memdbfinal
-.PHONY : memdbfinal
+prodcon: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 prodcon
+.PHONY : prodcon
 
 # fast build rule for target.
-memdbfinal/fast:
-	$(MAKE) -f CMakeFiles/memdbfinal.dir/build.make CMakeFiles/memdbfinal.dir/build
-.PHONY : memdbfinal/fast
+prodcon/fast:
+	$(MAKE) -f CMakeFiles/prodcon.dir/build.make CMakeFiles/prodcon.dir/build
+.PHONY : prodcon/fast
 
-main.o: main.c.o
+prodcon.o: prodcon.c.o
 
-.PHONY : main.o
+.PHONY : prodcon.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/memdbfinal.dir/build.make CMakeFiles/memdbfinal.dir/main.c.o
-.PHONY : main.c.o
+prodcon.c.o:
+	$(MAKE) -f CMakeFiles/prodcon.dir/build.make CMakeFiles/prodcon.dir/prodcon.c.o
+.PHONY : prodcon.c.o
 
-main.i: main.c.i
+prodcon.i: prodcon.c.i
 
-.PHONY : main.i
+.PHONY : prodcon.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/memdbfinal.dir/build.make CMakeFiles/memdbfinal.dir/main.c.i
-.PHONY : main.c.i
+prodcon.c.i:
+	$(MAKE) -f CMakeFiles/prodcon.dir/build.make CMakeFiles/prodcon.dir/prodcon.c.i
+.PHONY : prodcon.c.i
 
-main.s: main.c.s
+prodcon.s: prodcon.c.s
 
-.PHONY : main.s
+.PHONY : prodcon.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/memdbfinal.dir/build.make CMakeFiles/memdbfinal.dir/main.c.s
-.PHONY : main.c.s
+prodcon.c.s:
+	$(MAKE) -f CMakeFiles/prodcon.dir/build.make CMakeFiles/prodcon.dir/prodcon.c.s
+.PHONY : prodcon.c.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... memdbfinal"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... prodcon"
+	@echo "... prodcon.o"
+	@echo "... prodcon.i"
+	@echo "... prodcon.s"
 .PHONY : help
 
 
