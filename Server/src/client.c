@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     //copies the bypes from server address to structure server address
    
 
-    servaddress.sin_port = htons(portnum); //change port number to internet type
+    servaddress.sin_port = htons(portnum); //change port number to internet type //https://linux.die.net/man/3/htons
 
 
     if (connect(sockfd,(struct sockaddr *) &servaddress,sizeof(servaddress)) < 0) 
