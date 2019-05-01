@@ -19,10 +19,13 @@ void error(const char *errmsg)
 
 int main(int argc, char *argv[])
 {
-    int portnum, sockfd, rtnval;
+    int portnum;
+    int sockfd;
+    int rtnval;
 
 
-    struct sockaddr_in serv_addr;
+    struct sockaddr_in servaddress;
+
     struct hostent *server;
 
 
@@ -36,7 +39,7 @@ int main(int argc, char *argv[])
 
     char * port = strtok(argv[1],":");
 
-    port = strtok(NULL,":");
+    port = strtok(NULL,":"); // String parts[] = args[0].split(":")
 
     if(port == NULL){
         fprintf(stderr,"USAGE: %s host:port\n", argv[0]);
@@ -47,7 +50,7 @@ int main(int argc, char *argv[])
 
     portnum = atoi(port); //change string to int
 
-    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    sockfd = socket(AF_INET, SOCK_STREAM, 0); //setup internet TCP
 
 
     if (sockfd < 0) 
@@ -59,17 +62,25 @@ int main(int argc, char *argv[])
         fprintf(stderr,"ERROR, no such host\n");
         exit(0);
     }
-    bzero((char *) &serv_addr, sizeof(serv_addr));
-    serv_addr.sin_family = AF_INET;
-    bcopy((char *)server->h_addr, 
-         (char *)&serv_addr.sin_addr.s_addr,
-         server->h_length);
-    serv_addr.sin_port = htons(portnum);
-    if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) 
-        error("ERROR connecting");
-    printf("Please enter the message: ");
+    bzero((char *) &servaddress, sizeof(servaddress)); //initialize with zero
+
+
+    servaddress.sin_family = AF_INET; //sets internet address
+
+
+    bcopy((char *)server->h_addr,  (char *)&servaddress.sin_addr.s_addr,  server->h_length);
+    //copies the bypes from server address to structure server address
+   
+
+    servaddress.sin_port = htons(portnum); //change port number to internet type
+
+
+    if (connect(sockfd,(struct sockaddr *) &servaddress,sizeof(servaddress)) < 0) 
+        error("can't connect to server");
+
+
     bzero(buffer,256);
-    fgets(buffer,255,stdin);
+    while(fgets(buffer,255,stdin) !=0){
 
 
     rtnval = write(sockfd,buffer,strlen(buffer));
@@ -89,7 +100,9 @@ int main(int argc, char *argv[])
 
 
 
-    printf("%s\n",buffer);
+    printf("received: %s\n",buffer);
+
+}
     close(sockfd);
     return 0;
 }
