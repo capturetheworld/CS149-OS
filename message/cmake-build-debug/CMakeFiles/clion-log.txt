@@ -1,0 +1,7 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ian/Documents/GitHub/CS149-OS/message
+-- Configuring done
+CMake Error at CMakeLists.txt:7 (add_executable):
+  No SOURCES given to target: client.c
+
+
+-- Build files have been written to: /Users/ian/Documents/GitHub/CS149-OS/message/cmake-build-debug
