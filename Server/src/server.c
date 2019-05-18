@@ -32,11 +32,14 @@ int main(int argc, char *argv[])
      socklen_t clilen;
      char buffer[256];
      struct sockaddr_in serv_addr, cli_addr;
-     int n;
+     int rtnval;
+     int pid;
      if (argc < 2) {
          fprintf(stderr,"Error, please enter a port\n");
          exit(-2);
      }
+
+     // geeks for geeks AF_INET
      sock = socket(AF_INET, SOCK_STREAM, 0);
 
      if (sock < 0) 
@@ -47,44 +50,64 @@ int main(int argc, char *argv[])
      port = atoi(argv[1]);
 
      
-
+// geeksforgeeks 
      serv_addr.sin_family = AF_INET;
     
 
      serv_addr.sin_addr.s_addr = INADDR_ANY;
      
-
      serv_addr.sin_port = htons(port);
 
-
+// geeksforgeeks
      if (bind(sock, (struct sockaddr *) &serv_addr,
               sizeof(serv_addr)) < 0) 
-              error("Cannot bind sock to server");
+              error("Cannot bind socket to server");
 
      listen(sock,5);
      clilen = sizeof(cli_addr);
+
+    while(1){ //concurrency
+        
+     
+
+      // geeksforgeeks
 
      newsock = accept(sock, (struct sockaddr *) &cli_addr,  &clilen);
 
      if (newsock < 0) 
           error("Can't accept the incoming data");
 
-   while(1){
+      pid = fork();
+
+      if(pid <0){
+        error("Error for forking");
+      }
+
+else if(pid==0){
+
+   while(1){ //every process gets string
+
+
+
      bzero(buffer,256);
 
-     n = read(newsock,buffer,255);
+     rtnval = read(newsock,buffer,255);
 
-     if (n < 0) 
+     if (rtnval< 0) 
          error("Can't read from socket");
 
      printf("broadcasting: %s",buffer);
 
-     n = write(newsock,buffer,18);
+     rtnval = write(newsock,buffer,18);
 
-     if (n < 0) error("Can't write to socket");
+     if (rtnval < 0) error("Can't write to socket");
    }
-     close(newsock);
+}
 
+else{
+     close(newsock);
+ }
+ }
      close(sock);
      return 0; 
 }

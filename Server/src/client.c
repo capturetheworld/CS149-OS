@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     }
     bzero((char *) &servaddress, sizeof(servaddress)); //initialize with zero
 
-
+// geeks for geeks
     servaddress.sin_family = AF_INET; //sets internet address
 
 
@@ -75,6 +75,7 @@ int main(int argc, char *argv[])
     servaddress.sin_port = htons(portnum); //change port number to internet type //https://linux.die.net/man/3/htons
 
 
+// geeks
     if (connect(sockfd,(struct sockaddr *) &servaddress,sizeof(servaddress)) < 0) 
         error("can't connect to server");
 
